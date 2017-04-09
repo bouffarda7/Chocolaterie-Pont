@@ -152,17 +152,22 @@ public class Facture {
 	public void ImprimerFacture(){
 		//Cherche le format pour les montants d'argent selon le système
 		NumberFormat formatArgent = NumberFormat.getCurrencyInstance();
-		
+		System.out.println("Facture");
+		System.out.println("----------------------");
 		System.out.println("N° facture: " + String.format("%06d", m_NumeroFact));
+		System.out.printf("%n");
 		System.out.println(m_formatDate.format(m_dateActuelle));
+		System.out.printf("%n");
 		
 		for(int i = 0; i < m_listeProduit.size(); i++)
-			System.out.println(m_listeProduit.get(i).getNomProduit() + " Quantité: "
+			System.out.println(m_listeProduit.get(i).getNomProduit() + ", Quantité: "
 					+ "" +  m_listeProduit.get(i).getQuantite());	
 		
+		System.out.printf("%n");
 		System.out.println("Montant avant taxes: " + formatArgent.format(m_MontantAvantTaxe));
 		System.out.println("Montant TPS: " + formatArgent.format(m_MontantTPS));
 		System.out.println("Montant TVQ: " + formatArgent.format(m_MontantTVQ));
+		System.out.printf("%n");
 		System.out.println("Montant à payer: " + formatArgent.format(m_MontantAPayer));
 	}
 }
