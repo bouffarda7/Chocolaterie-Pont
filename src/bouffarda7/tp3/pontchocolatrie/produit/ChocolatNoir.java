@@ -36,7 +36,7 @@ public class ChocolatNoir implements Produit{
 		m_NomProduit = "Chocolat noir";
 		setPrixUnitaire(PrixBase);
 		setRabais(Rabais);
-		setPrixFinal(PrixBase, Rabais);
+		setPrixFinal(PrixBase, m_Rabais);
 		
 	}
 	
@@ -86,7 +86,7 @@ public class ChocolatNoir implements Produit{
 	 */
 	public void setRabais(double pctRabais){
 		if (pctRabais <= 1.00)
-			m_Rabais = pctRabais * getPrixUnitaire(); 
+			m_Rabais = pctRabais * m_PrixUnitaire; 
 	}
 	
 	/**
