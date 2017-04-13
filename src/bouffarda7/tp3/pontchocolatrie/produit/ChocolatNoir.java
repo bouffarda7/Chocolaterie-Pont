@@ -34,9 +34,15 @@ public class ChocolatNoir implements Produit{
 	
 	public ChocolatNoir(double PrixBase, double Rabais){
 		m_NomProduit = "Chocolat noir";
-		setPrixUnitaire(PrixBase);
+
+		m_PrixUnitaire = 4.50;
+		if (PrixBase != 00.00)
+			setPrixUnitaire(PrixBase);
+		else{
+			setPrixUnitaire(m_PrixUnitaire);
+		}
 		setRabais(Rabais);
-		setPrixFinal(PrixBase, m_Rabais);
+		setPrixFinal(m_PrixUnitaire, m_Rabais);
 		
 	}
 	
