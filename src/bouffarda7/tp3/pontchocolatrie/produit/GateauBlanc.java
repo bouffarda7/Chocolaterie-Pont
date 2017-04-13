@@ -3,7 +3,6 @@ package bouffarda7.tp3.pontchocolatrie.produit;
 public class GateauBlanc implements Produit {
 	
 	private String m_NomProduit;
-	
 	private double m_PrixUnitaire;
 	private double m_Rabais;
 
