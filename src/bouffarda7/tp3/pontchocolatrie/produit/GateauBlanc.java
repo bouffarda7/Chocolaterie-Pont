@@ -86,15 +86,11 @@ public class GateauBlanc implements Produit {
 	}
 
 	/**
-	 * Méthode qui calcule le prix final, 
-	 * c'est à dire le prix de base auquel on enlève
-	 * le montant du rabais.
+	 * Méthode qui initialise le prix de base du produit
 	 * 
-	 * @param PrixB Prix unitaire
-	 * @param Rabais Montant du rabais
+	 * @param Montant Le montant qui resprésente le prix de base à assigner au produit
 	 * 
-	 * 
-	 * @author Alexandre Bouffard<br>
+	 * @author Alexandre Bouffard <br>
 	 */
 	public void setPrixUnitaire(double Montant) {
 		m_PrixUnitaire = Montant;
