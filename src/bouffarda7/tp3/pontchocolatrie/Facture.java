@@ -160,8 +160,7 @@ public class Facture {
 		System.out.printf("%n");
 		
 		for(int i = 0; i < m_listeProduit.size(); i++)
-			System.out.println(m_listeProduit.get(i).getNomProduit() + ", Quantité: "
-					+ "" +  m_listeProduit.get(i).getQuantite());	
+			System.out.println(m_listeProduit.get(i).getNomProduit());	
 		
 		System.out.printf("%n");
 		System.out.println("Montant avant taxes: " + formatArgent.format(m_MontantAvantTaxe));

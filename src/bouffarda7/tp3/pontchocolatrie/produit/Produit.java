@@ -44,14 +44,6 @@ public interface Produit {
 	 */
 	public double getPrixFinal();
 	
-	/**
-	 * Méthode qui retourne le nombre/la quantité du produit.
-	 * 
-	 * @return m_Quantite Retourne la quantité
-	 * @author Alexandre Bouffard <br> 
-	 *
-	 */
-	public int getQuantite();
 	
 	/**
 	 * Méthode qui initialise le prix de base du produit
@@ -77,24 +69,13 @@ public interface Produit {
 	/**
 	 * Méthode qui calcule le prix final, 
 	 * c'est à dire le prix de base auquel on enlève
-	 * le montant du rabais, et on multiplie le résultat
-	 * par la quantité achetée
+	 * le montant du rabais.
 	 * 
 	 * @param PrixB Prix unitaire
 	 * @param Rabais Montant du rabais
-	 * @param Quant Quantité du produit
 	 * 
 	 * @author Alexandre Bouffard<br>
 	 */
-	public void setPrixFinal(double PrixB, double Rabais, int Quant);
-	
-	/**
-	 * Méthode qui initialize la quantité.
-	 * Cette dernière doit être, évidemment, plus grande que 1.
-	 * 
-	 * @param Quant La quantité du produit à acheter
-	 * @author Alexandre Bouffard <br>
-	 */
-	public void setQuantite(int Quant);
+	public void setPrixFinal(double PrixB, double Rabais);
 	
 }

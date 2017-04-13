@@ -6,7 +6,7 @@ public class ChocolatNoir implements Produit{
 	
 	private double m_PrixUnitaire;
 	private double m_Rabais;
-	private int m_Quantite;
+
 	
 	private double m_PrixFinal;
 	
@@ -18,28 +18,25 @@ public class ChocolatNoir implements Produit{
 	 * généraux aux produits.
 	 * <p>
 	 * La classe est initialisée avec
-	 * un prix de base, un pourcentage de
-	 * rabais et une quantité.
+	 * un prix de base et un pourcentage de
+	 * rabais.
 	 * Le prix final est calculé selon ces trois paramètres. 
-	 * 
-	 * 
+	 *  
 	 * 
 	 * @param PrixBase Le prix unitaire initial pour un sac de chocolat noir
 	 * 
 	 * @param Rabais Le rabais doit être de format X.XX - où X est un nombre de 0 à 9,
 	 *               exemple 15% = 0.15
 	 *               
-	 * @param Quantite La quantité est le nombre de sac que le client achète
 	 * 
 	 * @author Alexandre Bouffard
 	 */
 	
-	public ChocolatNoir(double PrixBase, double Rabais, int Quantite){
+	public ChocolatNoir(double PrixBase, double Rabais){
 		m_NomProduit = "Chocolat noir";
 		setPrixUnitaire(PrixBase);
 		setRabais(Rabais);
-		setQuantite(Quantite);
-		setPrixFinal(PrixBase, Rabais, Quantite);
+		setPrixFinal(PrixBase, Rabais);
 		
 	}
 	
@@ -102,43 +99,20 @@ public class ChocolatNoir implements Produit{
 		return m_Rabais;
 	}
 	
-	/**
-	 * Méthode qui initialize la quantité.
-	 * Cette dernière doit être, évidemment, plus grande que 1.
-	 * 
-	 * @param Quant La quantité du produit à acheter
-	 * @author Alexandre Bouffard <br>
-	 */
-	public void setQuantite(int Quant){
-		if (Quant > 0)
-		 m_Quantite = Quant;
-	}
-	
-	/**
-	 * Méthode qui retourne le nombre/la quantité du produit.
-	 * 
-	 * @return m_Quantite Retourne la quantité
-	 * @author Alexandre Bouffard <br> 
-	 *
-	 */
-	public int getQuantite(){
-		return m_Quantite;
-	}
 	
 	/**
 	 * Méthode qui calcule le prix final, 
 	 * c'est à dire le prix de base auquel on enlève
-	 * le montant du rabais, et on multiplie le résultat
-	 * par la quantité achetée
+	 * le montant du rabais.
 	 * 
 	 * @param PrixB Prix unitaire
 	 * @param Rabais Montant du rabais
-	 * @param Quant Quantité du produit
+	 * 
 	 * 
 	 * @author Alexandre Bouffard<br>
 	 */
-	public void setPrixFinal(double PrixB, double Rabais, int Quant){
-		m_PrixFinal = (PrixB - Rabais) * Quant;
+	public void setPrixFinal(double PrixB, double Rabais){
+		m_PrixFinal = PrixB - Rabais;
 	}
 	
 	/**

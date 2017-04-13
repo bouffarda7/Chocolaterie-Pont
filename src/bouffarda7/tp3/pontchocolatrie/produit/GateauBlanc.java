@@ -1,58 +1,57 @@
 package bouffarda7.tp3.pontchocolatrie.produit;
 
 public class GateauBlanc implements Produit {
+	
+	private String m_NomProduit;
+	
+	private double m_PrixUnitaire;
+	private double m_Rabais;
 
-	@Override
+	
+	private double m_PrixFinal;
+	
+	public GateauBlanc(double PrixBase, double Rabais) {
+		m_NomProduit = "Gâteau chocolat blanc";
+		setPrixUnitaire(PrixBase);
+		setRabais(Rabais);
+		setPrixFinal(PrixBase, Rabais);
+	}
+
+	
 	public String getNomProduit() {
-		// TODO Auto-generated method stub
-		return null;
+		return m_NomProduit;
 	}
 
-	@Override
+	
 	public double getPrixUnitaire() {
-		// TODO Auto-generated method stub
-		return 0;
+		return m_PrixUnitaire;
 	}
 
-	@Override
+	
 	public double getRabais() {
-		// TODO Auto-generated method stub
-		return 0;
+		return m_Rabais;
 	}
 
-	@Override
+	
 	public double getPrixFinal() {
-		// TODO Auto-generated method stub
-		return 0;
+		return m_PrixFinal;
 	}
 
-	@Override
-	public int getQuantite() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public void setPrixUnitaire(double Montant) {
-		// TODO Auto-generated method stub
+		m_PrixUnitaire = Montant;
 
 	}
 
-	@Override
+	
 	public void setRabais(double pctRabais) {
-		// TODO Auto-generated method stub
+		if (pctRabais <= 1.00)
+			m_Rabais = pctRabais * getPrixUnitaire(); 
 
 	}
 
-	@Override
-	public void setPrixFinal(double PrixB, double Rabais, int Quant) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void setQuantite(int Quant) {
-		// TODO Auto-generated method stub
+	
+	public void setPrixFinal(double PrixB, double Rabais) {
+		m_PrixFinal = PrixB - Rabais;
 
 	}
 
