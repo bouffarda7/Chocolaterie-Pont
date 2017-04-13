@@ -20,7 +20,7 @@ public class ChocolatNoir implements Produit{
 	 * La classe est initialisée avec
 	 * un prix de base et un pourcentage de
 	 * rabais.
-	 * Le prix final est calculé selon ces trois paramètres. 
+	 * Le prix final est calculé selon ces deux paramètres. 
 	 *  
 	 * 
 	 * @param PrixBase Le prix unitaire initial pour un sac de chocolat noir
